@@ -19,23 +19,23 @@ const UserSchema = new Schema(
     },
     address:{
         street:{
-            type:string
+            type:String
         },
         suit:{
-            type:string
+            type:String
         },
         city:{
-            type:string
+            type:String
         },
         zipcode:{
-            type:string
+            type:String
         },
         geo:{
             lat:{
-                type:string
+                type:String
             },
             lng:{ 
-                type:string
+                type:String
             }
             
         },
@@ -44,21 +44,21 @@ const UserSchema = new Schema(
         type: Number
     },
     wbsite:{
-        type: string,
+        type: String,
         default: "https://geogle.com"
     },
     company:{
         name:{
-            type: string,
+            type: String,
         }
     },
     company:{
         name:{
-            type: string,
+            type: String,
         }
     },
     password:{
-        type: string,
+        type: String,
         required: true,
         min:6,
         max: 12,
@@ -67,11 +67,11 @@ const UserSchema = new Schema(
     },
     carts: [],
     profilepics: {
-        type: string,
+        type: String,
     },
   },
   {
     timestamps: true,
   }
 );
-module.exports = mongoose.model("Product", ProductSchema);
+module.exports = mongoose.model("Product", UserSchema);
